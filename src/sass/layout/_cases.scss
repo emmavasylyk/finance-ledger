@@ -1,0 +1,41 @@
+.cases {
+  padding: 40px 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: $third-text-color;
+  background: $second-background-section;
+
+  &__question {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.66;
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: 20px;
+    &--correct {
+      display: block;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  &__image {
+    max-width: 100%;
+    opacity: 1;
+
+    .cases__item:hover &,
+    .cases__item:focus & {
+      opacity: 0.8;
+    }
+  }
+}
