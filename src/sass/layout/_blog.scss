@@ -1,7 +1,30 @@
 .blog{
-    padding: 40px 0px;
+    // padding: 40px 0px;
+    padding-bottom: 40px;
     background: $third-background-section;
 
+    &::before {
+            display: block;
+            content: " ";
+            width: 100%;
+            max-width: 670px;
+            height: 220px;
+            margin-bottom: 40px;
+    
+            @media screen and (max-width: $tablet - 1px) {
+                background-image: url('../images/home/blog.jpg');
+            }
+    
+            @media (min-device-pixel-ratio: 2) and (max-width: $tablet - 1px),
+            (min-resolution: 192dpi) and (max-width: $tablet - 1px),
+            (min-resolution: 2dppx) and (max-width: $tablet - 1px) {
+                background-image: url('../images/home/blog@2x.jpg');
+            }
+    
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
     &__data{
         font-weight: 400;
             font-size: 18px;
