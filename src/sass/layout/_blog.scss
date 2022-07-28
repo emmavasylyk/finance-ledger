@@ -1,4 +1,30 @@
 .blog{
     padding: 40px 0px;
     background: $third-background-section;
+
+    &__data{
+        font-weight: 400;
+            font-size: 18px;
+            line-height: 1.66;
+            margin-bottom: 8px;
+    }
+    &__title{
+        font-weight: 300;
+            font-size: 38px;
+            line-height: 1.26;
+            margin-bottom: 24px;
+    }
+    &__text{
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+    &__button{
+        &:hover,
+            &:focus {
+              color: $third-background-section;
+              background: $main-text-color;
+              border: 1px solid $third-background-section;
+            }
+    }
 }
