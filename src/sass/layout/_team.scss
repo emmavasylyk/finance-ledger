@@ -1,0 +1,101 @@
+.team{
+    padding: 40px 0px;
+    margin: 0 auto;
+        text-align: center;
+        color: $third-text-color;
+        background: $second-background-section;
+
+        &__question{
+            font-weight: 400;
+                font-size: 18px;
+                line-height: 1.66;
+                margin-bottom: 20px;
+        }
+        &__title{
+            font-weight: 300;
+                font-size: 38px;
+                line-height: 1.26;
+                margin-bottom: 20px;
+        }
+        &__text{
+            font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+        }
+}
+.team-item{
+    &:not(:last-child) {
+    margin-bottom: 20px;        }
+}
+.team-thumb {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    &__img {
+            max-width: 100%;
+            transform: scale(1);
+            transition: transform $anim-duration $anim-timing-function;
+
+            .team-thumb:hover &,
+                .team-thumb:focus & {
+                    transform: scale(1.02);
+                    box-shadow: 5px rgba(0, 5, 97, 0.1);
+                }
+        }
+}
+
+.team-thumb__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: $overlay-background-color;
+    transform: scale(0);
+    transition: transform $anim-duration $anim-timing-function,
+        opacity $anim-duration $anim-timing-function;
+    opacity: 0;
+    display: inline-flex;
+    align-items: center;
+
+    // @media screen and (max-width: 479px) {
+    //     display: inline-flex;
+    //     align-items: center;
+    // }
+
+    .team-thumb:hover &,
+    .team-thumb:focus & {
+        transform: scale(1.02);
+        opacity: 1;
+    }
+}
+
+.social-list{
+    display: flex;
+    margin: 0 auto;
+}
+.social-item{
+    &:not(:last-child){
+        margin-right: 25px;
+    }
+    &__icon{
+        font-size: 35px;
+        color: $main-text-color;
+    }
+        &__icon:hover,
+        &__icon:focus{
+            color: $social-icon-hover-color;
+        }
+}
+.team-box{
+    &__name{
+        font-weight: 400;
+            font-size: 23px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+    }
+    &__profession{font-size: 16px;
+        line-height: 1.6;
+    }
+}
