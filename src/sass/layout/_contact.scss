@@ -54,6 +54,7 @@
         width: 280px;
         font-size: 16px;
         line-height: 1.38;
+        
         @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
             font-size: 18px;
                 line-height: 1.39;
