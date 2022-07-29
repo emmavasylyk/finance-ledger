@@ -119,5 +119,9 @@
   top: 0;
   width: 100%;
   opacity: 0.8;
-  background: $overlay-background-color;
+  background: $third-text-color;
+  z-index: 10;
+  @media screen and (min-width: $tablet){
+    min-height: 70px;
+  }
 }
