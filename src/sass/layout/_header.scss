@@ -12,10 +12,13 @@
     margin: 0 auto;
     padding: 0 20px;
 
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
       padding: 0 32px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 0 28px;
+    }
   }
-}
 }
 .header-nav {
   border: none;
@@ -24,12 +27,11 @@
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-
-      @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .logo {
   display: flex;
@@ -40,11 +42,11 @@
   font-size: 32px;
   line-height: 1.32;
   transition: transform $anim-duration $anim-timing-function;
-    
-        &:hover,
-        &:focus {
-            transform: scale(1.02);
-        }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
 
   &__icon {
     fill: $second-text-color;
@@ -55,7 +57,7 @@
 
     &:hover,
     &:focus {
-        color: $logo-text-color;
+      color: $logo-text-color;
     }
   }
 }
@@ -68,8 +70,11 @@
       margin-right: 12px;
 
       @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-          margin-right: 20px;
-        }
+        margin-right: 20px;
+      }
+      @media screen and (min-width: $desktop) {
+        margin-right: 40px;
+      }
     }
   }
 
@@ -79,13 +84,14 @@
     line-height: 1.6;
     color: $main-text-color;
 
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-        font-size: 18px;
-          line-height: 1.56;
-      }
+    @media screen and (min-width: $tablet) {
+      font-size: 18px;
+      line-height: 1.56;
+    }
     &:hover,
-        &:focus {
-    color: $second-text-color;        }
+    &:focus {
+      color: $second-text-color;
+    }
 
     &::after {
       position: absolute;
@@ -108,10 +114,10 @@
     }
   }
 }
-.sticky{
+.sticky {
   position: fixed;
-  top:0;
-width: 100%;
+  top: 0;
+  width: 100%;
   opacity: 0.8;
   background: $overlay-background-color;
 }

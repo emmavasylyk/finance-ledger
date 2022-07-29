@@ -15,6 +15,9 @@
 }
 .footer-social-list{
     margin-bottom: 8px;
+    @media screen and (min-width: $desktop){
+        margin-bottom: 6px;
+    }
 }
 
 .social-icon{

@@ -1,66 +1,84 @@
-.contact{
+.contact {
+  color: $third-text-color;
+  background: $main-text-color;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     padding-bottom: 40px;
-    color: $third-text-color;
-    background: $fourth-background-section;
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
-        display: flex;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+
+  &::before {
+    display: block;
+    content: ' ';
+    width: 100%;
+    max-width: 670px;
+    height: 220px;
+    @media screen and (max-width: $tablet - 1px) {
+      background-image: url('../images/home/contact.jpg');
     }
 
-    &::before{
-        display: block;
-        content: " ";
-        width: 100%;
-        max-width: 670px;
-            height: 220px;
-            @media screen and (max-width: $tablet - 1px) {
-        margin-bottom: 40px;    
-            background-image: url('../images/home/contact.jpg');
-        }
-    
-        @media (min-device-pixel-ratio: 2) and (max-width: $tablet - 1px),
-        (min-resolution: 192dpi) and (max-width: $tablet - 1px),
-        (min-resolution: 2dppx) and (max-width: $tablet - 1px) {
-            background-image: url('../images/home/contact@2x.jpg');
-        }
-        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
-            height: 354px;
-            max-width: 368px;
-            background-image: url('../images/home/contact.jpg');
-        }
-                @media (min-device-pixel-ratio: 2) and (min-width: $tablet) and (max-width: $desktop - 1px),
-                (min-resolution: 192dpi) and (min-width: $tablet) and (max-width: $desktop - 1px),
-                (min-resolution: 2dppx) and (min-width: $tablet) and (max-width: $desktop - 1px){
-                            background-image: url('../images/home/contact@2x.jpg');
-                }
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    @media (min-device-pixel-ratio: 2) and (max-width: $tablet - 1px),
+      (min-resolution: 192dpi) and (max-width: $tablet - 1px),
+      (min-resolution: 2dppx) and (max-width: $tablet - 1px) {
+      background-image: url('../images/home/contact@2x.jpg');
     }
-&__container{
     @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-            padding-top: 40px;
-        }
-}
-    &__title{
-        font-weight: 300;
-            font-size: 38px;
-            line-height: 1.26;
-            margin-bottom: 32px;
+      height: 354px;
+      max-width: 368px;
+      background-image: url('../images/home/contact.jpg');
     }
-    &__button{
-        margin: 0 auto;
-        padding: 10px 116px;
-        height: 42px;
-        width: 280px;
-        font-size: 16px;
-        line-height: 1.38;
-        
-        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
-            font-size: 18px;
-                line-height: 1.39;
-                width: 336px;
-                height: 42px;
-                padding: 10px 146px;
-        }
+    @media (min-device-pixel-ratio: 2) and (min-width: $tablet) and (max-width: $desktop - 1px),
+      (min-resolution: 192dpi) and (min-width: $tablet) and (max-width: $desktop - 1px),
+      (min-resolution: 2dppx) and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      background-image: url('../images/home/contact@2x.jpg');
     }
+
+    @media screen and (min-width: $desktop) {
+      height: 454px;
+      background-image: url('../images/home/contact.jpg');
+    }
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__container {
+    background: $fourth-background-section;
+    padding: 40px 20px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      padding: 32px 32px 40px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 80px 28px 80px 20px;
+    }
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: 32px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__button {
+    margin: 0 auto;
+    padding: 10px 116px;
+    height: 42px;
+    width: 280px;
+    font-size: 16px;
+    line-height: 1.38;
+    @media screen and (min-width: $tablet) {
+      font-size: 18px;
+      line-height: 1.39;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 336px;
+      padding: 10px 146px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 100%;
+    }
+  }
 }

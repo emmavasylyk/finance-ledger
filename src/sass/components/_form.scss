@@ -6,7 +6,10 @@
       margin-bottom: 32px;
     }
     &:nth-child(2) {
-      margin-bottom: 53px;
+      margin-bottom: 40px;
+      @media screen and (min-width: $desktop){
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -22,7 +25,12 @@
     @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
       font-size: 18px;
         line-height: 1.28;
+        width: 324px;
     }
+        @media screen and (min-width: $desktop){
+          line-height: 1.56;
+          width: 620px;
+        }
 
     &_required {
             position: absolute;
