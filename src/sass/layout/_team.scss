@@ -1,101 +1,136 @@
-.team{
-    padding: 40px 0px;
-    margin: 0 auto;
-        text-align: center;
-        color: $third-text-color;
-        background: $second-background-section;
+.team {
+  padding: 40px 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: $third-text-color;
+  background: $second-background-section;
 
-        &__question{
-            font-weight: 400;
-                font-size: 18px;
-                line-height: 1.66;
-                margin-bottom: 20px;
-        }
-        &__title{
-            font-weight: 300;
-                font-size: 38px;
-                line-height: 1.26;
-                margin-bottom: 20px;
-        }
-        &__text{
-            font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 20px;
-        }
+  &__question {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.66;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      font-size: 20px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      margin-bottom: 24px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      font-size: 17px;
+      line-height: 1.66;
+      margin-bottom: 24px;
+    }
+  }
 }
-.team-item{
+.team-list {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+  }
+}
+.team-item {
+  @media screen and (max-width: $tablet - 1px) {
     &:not(:last-child) {
-    margin-bottom: 20px;        }
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    width: calc((100% - 6 * 8px) / 3);
+    margin: 8px;
+  }
 }
 .team-thumb {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
 
-    &__img {
-            max-width: 100%;
-            transform: scale(1);
-            transition: transform $anim-duration $anim-timing-function;
-
-            .team-thumb:hover &,
-                .team-thumb:focus & {
-                    transform: scale(1.02);
-                    box-shadow: 5px rgba(0, 5, 97, 0.1);
-                }
-        }
-}
-
-.team-thumb__overlay {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background: $overlay-background-color;
-    transform: scale(0);
-    transition: transform $anim-duration $anim-timing-function,
-        opacity $anim-duration $anim-timing-function;
-    opacity: 0;
-    display: inline-flex;
-    align-items: center;
-
-    // @media screen and (max-width: 479px) {
-    //     display: inline-flex;
-    //     align-items: center;
-    // }
+  &__img {
+    max-width: 100%;
+    transform: scale(0.98);
+    transition: transform $anim-duration $anim-timing-function;
 
     .team-thumb:hover &,
     .team-thumb:focus & {
-        transform: scale(1.02);
-        opacity: 1;
+      transform: scale(1.02);
+      box-shadow: 5px rgba(0, 5, 97, 0.1);
     }
+  }
 }
 
-.social-list{
-    display: flex;
-    margin: 0 auto;
+.team-thumb__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: $overlay-background-color;
+  transform: scale(0);
+  transition: transform $anim-duration $anim-timing-function,
+    opacity $anim-duration $anim-timing-function;
+  opacity: 0;
+  display: inline-flex;
+  align-items: center;
+
+  .team-thumb:hover &,
+  .team-thumb:focus & {
+    transform: scale(1.02);
+    opacity: 1;
+  }
 }
-.social-item{
-    &:not(:last-child){
-        margin-right: 25px;
-    }
-    &__icon{
-        font-size: 35px;
-        color: $main-text-color;
-    }
-        &__icon:hover,
-        &__icon:focus{
-            color: $social-icon-hover-color;
-        }
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
-.team-box{
-    &__name{
-        font-weight: 400;
-            font-size: 23px;
-            line-height: 1.25;
-            margin-bottom: 12px;
+.social-item {
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+  &__icon {
+    font-size: 35px;
+    color: $main-text-color;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+        font-size: 20px;
     }
-    &__profession{font-size: 16px;
-        line-height: 1.6;
+  }
+  &__icon:hover,
+  &__icon:focus {
+    color: $social-icon-hover-color;
+  }
+}
+.team-box {
+  &__name {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+        font-size: 25px;
+            line-height: 1.27;
     }
+  }
+  &__profession {
+    font-size: 16px;
+    line-height: 1.6;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+        font-size: 18px;
+            line-height: 1.56;
+    }
+  }
 }

@@ -1,44 +1,88 @@
-.hero{
-    text-align: center;
-    margin: 0 auto;
-    max-height: 533px;
-    padding-top: 142px;
-    padding-bottom: 96px;
+.hero {
+  text-align: center;
+  margin: 0 auto;
+  max-height: 533px;
+  padding-top: 142px;
+  padding-bottom: 96px;
 
-    @media screen and (max-width: $tablet - 1px){
-        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/home/showcase.jpg);
-    }
-    @media (min-device-pixel-ratio: 2) and (max-width: $tablet - 1px),
+  @media screen and (max-width: $tablet - 1px) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../images/home/showcase.jpg);
+  }
+  @media (min-device-pixel-ratio: 2) and (max-width: $tablet - 1px),
     (min-resolution: 192dpi) and (max-width: $tablet - 1px),
     (min-resolution: 2dppx) and (max-width: $tablet - 1px) {
-        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(../images/home/showcase@2x.jpg);
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../images/home/showcase@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    max-height: 1024px;
+    padding: 407px 0px 410px;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../images/home/showcase.jpg);
+  }
+  @media (min-device-pixel-ratio: 2) and (min-width: $tablet) and (max-width: $desktop - 1px),
+    (min-resolution: 192dpi) and (min-width: $tablet) and (max-width: $desktop - 1px),
+    (min-resolution: 2dppx) and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../images/home/showcase@2x.jpg);
+  }
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $third-text-color;
+
+  &__title {
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 1.27;
+    color: $hero-text-color;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      font-size: 55px;
+      line-height: 1.2;
+      margin-bottom: 24px;
     }
+  }
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $third-text-color;
-
-
-    &__title{
-        font-weight: 300;
-        font-size: 52px;
-        line-height: 1.27;
-        color: $hero-text-color;
-        margin-bottom: 20px;
+  &__text {
+    font-size: 22px;
+    line-height: 1.67;
+    color: $hero-text-color;
+    margin-bottom: 24px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      margin-bottom: 32px;
     }
+  }
 
-    &__text{
-        font-size: 22px;
-        line-height: 1.67;
-        color: $hero-text-color;
-        margin-bottom: 24px;
+  &__button {
+    padding: 10px 29px;
+    width: 156px;
+    height: 45px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 165px;
+      height: 48px;
+      font-size: 18px;
+      line-height: 1.56;
     }
-
-    &__button{
-        padding: 10px;
-            width: 156px;
-            height: 45px;
-    }
+  }
 }

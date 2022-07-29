@@ -1,0 +1,28 @@
+.footer{
+    padding: 20px 0px;
+    margin: 0 auto;
+    background: $third-text-color;
+
+    &__text{
+        font-size: 16px;
+            line-height: 1.6;
+        text-align: center;
+        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+            font-size: 18px;
+                line-height: 1.56;
+        }
+    }
+}
+.footer-social-list{
+    margin-bottom: 8px;
+}
+
+.icon{
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+        font-size: 30px;}
+    
+    &:hover {
+            color: $second-text-color;
+    
+        }
+}

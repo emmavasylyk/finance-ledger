@@ -10,24 +10,53 @@
     font-size: 18px;
     line-height: 1.66;
     margin-bottom: 20px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+      font-size: 20px;
+        line-height: 1.65;
+        margin-bottom: 24px;
+    }
   }
   &__title {
     font-weight: 300;
     font-size: 38px;
     line-height: 1.26;
     margin-bottom: 20px;
-    &--correct {
-      display: block;
+    @media screen and (max-width: $tablet - 1px){
+&--correct {
+    display: block;
+  }
     }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+      margin-bottom: 24px;
+    }
+    
   }
   &__text {
     margin-bottom: 20px;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 8px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+      font-size: 18px;
+        line-height: 1.56;
+        margin-bottom: 24px;
     }
+  }
+&__list{
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+  }
+}
+  &__item {
+    @media screen and (max-width: $tablet - 1px){
+&:not(:last-child) {
+    margin-bottom: 8px;
+  }
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+width: calc((100% - 6 * 8px) / 3);
+margin: 8px;
+    }
+    
   }
   &__image {
     max-width: 100%;

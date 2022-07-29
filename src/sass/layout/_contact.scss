@@ -2,6 +2,9 @@
     padding-bottom: 40px;
     color: $third-text-color;
     background: $fourth-background-section;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+        display: flex;
+    }
 
     &::before{
         display: block;
@@ -9,8 +12,8 @@
         width: 100%;
         max-width: 670px;
             height: 220px;
-            margin-bottom: 40px;    
-    @media screen and (max-width: $tablet - 1px) {
+            @media screen and (max-width: $tablet - 1px) {
+        margin-bottom: 40px;    
             background-image: url('../images/home/contact.jpg');
         }
     
@@ -19,12 +22,25 @@
         (min-resolution: 2dppx) and (max-width: $tablet - 1px) {
             background-image: url('../images/home/contact@2x.jpg');
         }
-    
+        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+            height: 354px;
+            max-width: 368px;
+            background-image: url('../images/home/contact.jpg');
+        }
+                @media (min-device-pixel-ratio: 2) and (min-width: $tablet) and (max-width: $desktop - 1px),
+                (min-resolution: 192dpi) and (min-width: $tablet) and (max-width: $desktop - 1px),
+                (min-resolution: 2dppx) and (min-width: $tablet) and (max-width: $desktop - 1px){
+                            background-image: url('../images/home/contact@2x.jpg');
+                }
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
-
+&__container{
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+            padding-top: 40px;
+        }
+}
     &__title{
         font-weight: 300;
             font-size: 38px;
@@ -38,5 +54,12 @@
         width: 280px;
         font-size: 16px;
         line-height: 1.38;
+        @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+            font-size: 18px;
+                line-height: 1.39;
+                width: 336px;
+                height: 42px;
+                padding: 10px 146px;
+        }
     }
 }
